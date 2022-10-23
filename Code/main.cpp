@@ -1316,7 +1316,6 @@ void DrawScene( Mat4f *a_pView, Mat4f *a_pProj )
 	//glDepthMask(GL_FALSE);
 	
 	glEnable(GL_STENCIL_TEST);
-	glStencilMask(0xFF);
 	glStencilMaskSeparate(0xFF,GL_FRONT);//enable those bit slots to be written out of
 	glStencilMaskSeparate(0x0,GL_BACK);
 	glStencilFunc(GL_ALWAYS, 0x1, 0xFF); //ref&mask op storedVal&mask
@@ -1380,7 +1379,6 @@ void DrawScene( Mat4f *a_pView, Mat4f *a_pProj )
     glActiveTexture( GL_TEXTURE2 );
     glBindTexture( GL_TEXTURE_2D, GBufferTextures[2]);
 
-    glStencilMask(0xFF);
 	glStencilFunc(GL_EQUAL, 0x1, 0xFF); //ref&mask op storedVal&mask
     glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
 
