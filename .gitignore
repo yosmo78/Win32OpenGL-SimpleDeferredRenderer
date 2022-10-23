@@ -1,0 +1,6 @@
+bin
+Code/*.obj
+Models/*.exe
+Models/*.obj
+Models/*.pdb
+Models/Models.h
